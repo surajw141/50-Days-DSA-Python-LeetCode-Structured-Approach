@@ -6,11 +6,16 @@ Think about the following -
 2.Is there a better way to solve this with a more optimum Time complexity than the Brute force way ? """
 
 # solution below
-def sorted_squared_array(array):
-    squared_array = []
-    for i in array:
-        squared_array.append(i*i)
-    squared_array.sort()
-    print(squared_array)
-    return squared_array
-sorted_squared_array([8,9,1,2,5,])
+# Time = O(nlogn)  Space = O(n)
+def sorted_squared(array):
+    new_array = [0]*len(array)
+    for i in range(len(array)):
+        new_array[i] = array[i]**2
+        # new_array[i] = array[i]*array[i]
+    new_array.sort()
+    return new_array
+
+
+print(sorted_squared([-5, 1, 2]))
+print(sorted_squared([0, 1, 2]))
+print(sorted_squared([]))
