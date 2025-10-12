@@ -5,17 +5,27 @@ Think about the following -
 1.What would be the brute force way of solving this question ? What would be the Time and Space complexity of this approach?
 2.Is there a better way to solve this with a more optimum Time complexity than the Brute force way ? """
 
-# solution below
-# Time = O(nlogn)  Space = O(n)
-def sorted_squared(array):
+# solution below 
+#Method One
+def sorted_squared1(array):
     new_array = [0]*len(array)
     for i in range(len(array)):
         new_array[i] = array[i]**2
         # new_array[i] = array[i]*array[i]
     new_array.sort()
     return new_array
+print(sorted_squared1([-5, 1, 2]))
+print(sorted_squared1([0, 1, 2]))
+print(sorted_squared1([]))
+
+#method 2
+def sorted_squared2(array):
+    n = len(array)
+    res = [0]*n
+    for i in range(n):
+        res[i] = array[i]**2
+    res.sort()
+    return res  # O(nlogn)
 
 
-print(sorted_squared([-5, 1, 2]))
-print(sorted_squared([0, 1, 2]))
-print(sorted_squared([]))
+print(sorted_squared2([-5, 1, 2]))
