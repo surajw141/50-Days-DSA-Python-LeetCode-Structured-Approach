@@ -11,4 +11,4 @@ def canJump(nums):
         if max_index >= n - 1:
             return True
         
-print(canJump([2,3,1,1,4]))  # ✅ should return True
+print(canJump([2,3,1,1,4]))
