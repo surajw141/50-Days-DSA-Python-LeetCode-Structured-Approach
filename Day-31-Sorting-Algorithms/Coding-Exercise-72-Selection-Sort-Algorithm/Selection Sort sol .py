@@ -14,3 +14,5 @@ def selection_sort(nums):
         if i != smallest:
             nums[i], nums[smallest] = nums[smallest], nums[i]
     return nums
+
+print(selection_sort([3, 1, 5, 4, 2]))
