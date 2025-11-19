@@ -32,4 +32,12 @@ def reverseLinkedList(head):
  
 # The Time complexity of this function is O(n), where n is the number of nodes in the list.
  
-reverseLinkedList(head)
+
+# Test the reverseLinkedList function
+reversed_head = reverseLinkedList(head)
+
+# Print reversed list
+current = reversed_head
+while current:
+    print(current.value, end=" -> " if current.next else "")
+    current = current.next
