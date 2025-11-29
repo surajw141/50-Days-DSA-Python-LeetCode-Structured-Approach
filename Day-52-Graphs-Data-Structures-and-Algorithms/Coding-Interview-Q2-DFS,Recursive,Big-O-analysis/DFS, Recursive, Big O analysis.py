@@ -28,3 +28,6 @@ def trav_recursive_DFS(graph, vertex, output, visited):
  
     # Return the output list
     return output
+
+result = trav_recursive_DFS(adjacency_list, 'A', [], {})
+print(result)
