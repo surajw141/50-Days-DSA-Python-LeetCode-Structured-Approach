@@ -1,18 +1,25 @@
+"""Question
+
+Implement a Priority Queue as a min Binary Heap. The Priority Queue class should support the following functions
+1.Enqueue to insert an element
+
+2.Dequeue to extract the element with the highest priority (lowest numerical priority is treated as highest priority)"""
+
 class Node:
     def __init__(self, value, priority):
         self.value = value
         self.priority = priority
- 
+
 class PriorityQueue:
     def __init__(self):
         self.data = []
- 
+
     def enqueue(self, value, priority):
         node = Node(value, priority)
         self.data.append(node)
         self.bubble_up()
         return self
- 
+
     def bubble_up(self):
         idx = len(self.data) - 1
         element = self.data[idx]
@@ -26,7 +33,7 @@ class PriorityQueue:
             idx = parent_idx
         # Time complexity: O(logn) as in worst case, we may have to traverse up to the root from the last node
         # The height of a binary heap is logn, hence the time complexity
- 
+
     def dequeue(self):
         min_element = self.data[0]
         last = self.data.pop()
@@ -34,7 +41,7 @@ class PriorityQueue:
             self.data[0] = last
             self.bubble_down()
         return min_element
- 
+
     def bubble_down(self):
         idx = 0
         length = len(self.data)
